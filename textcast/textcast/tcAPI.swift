@@ -48,7 +48,7 @@ class tcAPI{
         guard let image = UIImage(named: "tvBacking.png") else {
             fatalError("Could not find image for background.")
         }
-        textToImage(drawText: text, inImage: image)
+        textToImage(drawText: text, onImage: image)
     }
     
     private func getIPAddress() -> String? {
