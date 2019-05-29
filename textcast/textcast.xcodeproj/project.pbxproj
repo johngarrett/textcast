@@ -11,8 +11,8 @@
 		D4771C5B229CC6DF0053CCAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C5A229CC6DF0053CCAC /* MainViewController.swift */; };
 		D4771C61229CCBD70053CCAC /* Commodore Rounded v1.2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */; };
 		D4771C63229CCDFB0053CCAC /* TextCastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C62229CCDFB0053CCAC /* TextCastAPI.swift */; };
+		D4771C6A229E11850053CCAC /* CustomServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C69229E11850053CCAC /* CustomServer.swift */; };
 		D4FB89A0229CC31000F290CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FB899F229CC31000F290CC /* AppDelegate.swift */; };
-		D4FB89A2229CC31000F290CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FB89A1229CC31000F290CC /* ViewController.swift */; };
 		D4FB89A5229CC31000F290CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FB89A3229CC31000F290CC /* Main.storyboard */; };
 		D4FB89A7229CC31100F290CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FB89A6229CC31100F290CC /* Assets.xcassets */; };
 		D4FB89AA229CC31100F290CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FB89A8229CC31100F290CC /* LaunchScreen.storyboard */; };
@@ -26,9 +26,9 @@
 		D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Commodore Rounded v1.2.ttf"; path = "../../Commodore Rounded v1.2.ttf"; sourceTree = "<group>"; };
 		D4771C62229CCDFB0053CCAC /* TextCastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCastAPI.swift; sourceTree = "<group>"; };
 		D4771C64229CD0C20053CCAC /* textcast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "textcast-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4771C69229E11850053CCAC /* CustomServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomServer.swift; sourceTree = "<group>"; };
 		D4FB899C229CC31000F290CC /* textcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FB899F229CC31000F290CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4FB89A1229CC31000F290CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4FB89A4229CC31000F290CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4FB89A6229CC31100F290CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4FB89A9229CC31100F290CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 		D4FB899E229CC31000F290CC /* textcast */ = {
 			isa = PBXGroup;
 			children = (
+				D4771C69229E11850053CCAC /* CustomServer.swift */,
 				D4FB89B1229CC33D00F290CC /* textcast.entitlements */,
 				D4FB899F229CC31000F290CC /* AppDelegate.swift */,
-				D4FB89A1229CC31000F290CC /* ViewController.swift */,
 				D4FB89A3229CC31000F290CC /* Main.storyboard */,
 				D4771C5A229CC6DF0053CCAC /* MainViewController.swift */,
 				D4FB89A6229CC31100F290CC /* Assets.xcassets */,
@@ -139,6 +139,18 @@
 						SystemCapabilities = {
 							com.apple.AccessWiFi = {
 								enabled = 1;
+							};
+							com.apple.HotspotConfiguration = {
+								enabled = 0;
+							};
+							com.apple.Multipath = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+							com.apple.WAC = {
+								enabled = 0;
 							};
 						};
 					};
@@ -242,8 +254,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4771C6A229E11850053CCAC /* CustomServer.swift in Sources */,
 				D4771C5B229CC6DF0053CCAC /* MainViewController.swift in Sources */,
-				D4FB89A2229CC31000F290CC /* ViewController.swift in Sources */,
 				D4771C63229CCDFB0053CCAC /* TextCastAPI.swift in Sources */,
 				D4FB89A0229CC31000F290CC /* AppDelegate.swift in Sources */,
 			);

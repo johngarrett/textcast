@@ -12,26 +12,38 @@ import GoogleCast
 
 
 class TextCastAPI{
-    private let server = HttpServer()
-    private let port:UInt16 = 9080
+    private let port:UInt16 = 8080
+    private let server = customServer(Bundle.main.resourcePath!, withText: "testing")
+    
     static var shared = {
         return TextCastAPI()
     }
     
     func getAddress() -> String?{
         if let ipAddr = getIPAddress(){
-            return "\(ipAddr):\(port)"
+            return "http://\(ipAddr):\(port)/text"
         }
+        return nil
     }
     
     init(){
         do{
-            print(getIPAddress() ?? "no ip address avaliable")
+            print(getAddress() ?? "no ip address avaliable")
             try server.start(port)
-            
         }
         catch{
             fatalError()
+        }
+    }
+    
+    func generatePage(withText text: String){
+
+        server["/text"] = scopes {
+            html {
+                body {
+                    h1 { inner = text }
+                }
+            }
         }
     }
     
