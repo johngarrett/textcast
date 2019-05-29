@@ -24,10 +24,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-vX-oJi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Z-eB-XBF">
-                                        <rect key="frame" x="20" y="50" width="54" height="29"/>
+                                        <rect key="frame" x="20" y="43.5" width="54" height="29"/>
                                         <fontDescription key="fontDescription" name="Commodore-64-Rounded" family="Commodore 64 Rounded" pointSize="17"/>
                                         <state key="normal" title="Post">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -39,13 +39,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.54509803921568623" green="0.61568627450980395" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="87Z-eB-XBF" firstAttribute="top" secondItem="oWZ-vX-oJi" secondAttribute="top" constant="50" id="8RK-q5-s7b"/>
                                     <constraint firstItem="87Z-eB-XBF" firstAttribute="leading" secondItem="oWZ-vX-oJi" secondAttribute="leading" constant="20" id="XPK-fe-5gY"/>
-                                    <constraint firstAttribute="height" constant="100" id="rN1-1G-kjb"/>
+                                    <constraint firstItem="87Z-eB-XBF" firstAttribute="centerY" secondItem="oWZ-vX-oJi" secondAttribute="centerY" constant="18" id="fvs-cj-r6v"/>
+                                    <constraint firstAttribute="height" constant="80" id="rN1-1G-kjb"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter some text..." translatesAutoresizingMaskIntoConstraints="NO" id="fdb-LG-5BM">
-                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="816"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.2274509804" green="0.30588235289999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Commodore-64-Rounded" family="Commodore 64 Rounded" pointSize="17"/>
@@ -65,6 +65,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="postButton" destination="87Z-eB-XBF" id="F7J-lR-wap"/>
                         <outlet property="textView" destination="fdb-LG-5BM" id="zqk-1x-dus"/>
                     </connections>
                 </viewController>

@@ -11,7 +11,8 @@ import GoogleCast
 class MainViewController: UIViewController {
 
     @IBOutlet var textView: UITextView!
-
+    @IBOutlet var postButton: UIButton!
+    
     private var castButton: GCKUICastButton!
     private var mediaInformation: GCKMediaInformation?
     private var sessionManager: GCKSessionManager!
@@ -21,7 +22,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         api = tcAPI()
         
-        castButton = GCKUICastButton(frame: CGRect(x: UIScreen.main.bounds.width - 80, y: 30, width: 50, height: 50))
+        castButton = GCKUICastButton(frame: CGRect(x: UIScreen.main.bounds.width - postButton.frame.height - 20, y: postButton.frame.minY, width: postButton.frame.height, height: postButton.frame.height))
         castButton.tintColor = .black
         self.view.addSubview(castButton)
     }

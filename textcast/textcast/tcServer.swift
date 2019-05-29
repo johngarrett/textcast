@@ -18,7 +18,6 @@ public func tcServer(_ publicDir: String, withText text: String) -> HttpServer {
     
     server["/files/:path"] = directoryBrowser(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
 
-    //http://192.168.1.136:8080/files//fileName.png
     server["/"] = scopes {
         html {
             body {
@@ -27,14 +26,6 @@ public func tcServer(_ publicDir: String, withText text: String) -> HttpServer {
                         a { href = service; inner = service }
                     }
                 }
-            }
-        }
-    }
-    
-    server["/text"] = scopes {
-        html {
-            body {
-                h1 { inner = text }
             }
         }
     }
@@ -49,20 +40,4 @@ public func tcServer(_ publicDir: String, withText text: String) -> HttpServer {
     }
     
     return server
-}
-
-fileprivate func retrieveImage(){
-    let fileManager = FileManager.default
-    
-//    let documentsPath =
-//    let documentsURL = URL(fileURLWithPath: documentsPath, isDirectory: true)
-//    let path = String(fileURL.absoluteString.dropFirst(7)) //remove file://
-    
-    //return the file if we have it in storage
-//    if fileManager.fileExists(atPath: path), let data = fileManager.contents(atPath: path), data.count > 3708{
-//        let result = Result.success(data)
-//        completion(result)
-//        return
-//    }
-    
 }
