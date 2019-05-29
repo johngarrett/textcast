@@ -93,17 +93,17 @@
 			isa = PBXGroup;
 			children = (
 				D42AF68D229EC7FD004CA8C0 /* textcast-Bridging-Header.h */,
+				D4771C5A229CC6DF0053CCAC /* MainViewController.swift */,
+				D4FB899F229CC31000F290CC /* AppDelegate.swift */,
+				D4771C69229E11850053CCAC /* tcServer.swift */,
 				D42AF687229EC0DD004CA8C0 /* tcImage.swift */,
+				D4771C62229CCDFB0053CCAC /* tcAPI.swift */,
 				D42AF685229EBD15004CA8C0 /* testImage.jpg */,
 				D42AF68B229EC7B5004CA8C0 /* tvBacking.png */,
-				D4771C69229E11850053CCAC /* tcServer.swift */,
 				D4FB89B1229CC33D00F290CC /* textcast.entitlements */,
-				D4FB899F229CC31000F290CC /* AppDelegate.swift */,
 				D4FB89A3229CC31000F290CC /* Main.storyboard */,
-				D4771C5A229CC6DF0053CCAC /* MainViewController.swift */,
-				D4FB89A6229CC31100F290CC /* Assets.xcassets */,
 				D4FB89A8229CC31100F290CC /* LaunchScreen.storyboard */,
-				D4771C62229CCDFB0053CCAC /* tcAPI.swift */,
+				D4FB89A6229CC31100F290CC /* Assets.xcassets */,
 				D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */,
 				D4FB89AB229CC31100F290CC /* Info.plist */,
 			);
@@ -422,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65W3J85C2;
 				INFOPLIST_FILE = textcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F65W3J85C2;
 				INFOPLIST_FILE = textcast/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
