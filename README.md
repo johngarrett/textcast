@@ -3,6 +3,7 @@ Put text from your phone on your chromecast
 
 #### iphone
 <img src="https://cdn.discordapp.com/attachments/513098379924996097/583320058370064404/IMG_5631.PNG" width="350">
+
 #### chromecast
 <img src="https://cdn.discordapp.com/attachments/513098379924996097/583320005760909332/renderedImage752199165.png" width="900">
 
@@ -11,12 +12,14 @@ Put text from your phone on your chromecast
 1. Grab text from the user
 2. Overlay the text on an image
 3. Save the image into file manager
-4. Start a localized server on the phone through port 9080
+4. Start a localized server on the phone
 5. Send the chromecast the phone's socket address and path to the image combined into a URL
 
 ### Why is it so complicated?
 
 Without a static url, registered application, and chomecast developer license, the only thing you can send to a chromecast through their api is a link to media. Their documentation doesn't specify what media is acceptable but in the API, you specify media type by using [MIME notation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types). I tried out a ton of these, thinking it was an easy way out, but only image types and video types are allowed. 
+
+### How was it done?
 
 So far, we know that you can only send **URLs** to the chromecast that point to **images** or **videos**. 
 
