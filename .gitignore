@@ -1,0 +1,3 @@
+#dont track pods
+Pods/
+Podfile.lock
