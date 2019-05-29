@@ -25,8 +25,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-vX-oJi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87Z-eB-XBF">
+                                        <rect key="frame" x="50" y="50" width="54" height="29"/>
+                                        <fontDescription key="fontDescription" name="Commodore-64-Rounded" family="Commodore 64 Rounded" pointSize="17"/>
+                                        <state key="normal" title="Post">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="postButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hz-HI-IU0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.54509803921568623" green="0.61568627450980395" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="87Z-eB-XBF" firstAttribute="top" secondItem="oWZ-vX-oJi" secondAttribute="top" constant="50" id="8RK-q5-s7b"/>
+                                    <constraint firstItem="87Z-eB-XBF" firstAttribute="leading" secondItem="oWZ-vX-oJi" secondAttribute="leading" constant="50" id="XPK-fe-5gY"/>
                                     <constraint firstAttribute="height" constant="100" id="rN1-1G-kjb"/>
                                 </constraints>
                             </view>
@@ -50,6 +64,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="fdb-LG-5BM" id="zqk-1x-dus"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
