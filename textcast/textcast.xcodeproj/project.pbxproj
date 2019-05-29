@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2298DE374DB8D9D4D718E0CF /* Pods_textcast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE0CD570237804095411049 /* Pods_textcast.framework */; };
+		D42AF686229EBD15004CA8C0 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D42AF685229EBD15004CA8C0 /* testImage.jpg */; };
+		D42AF688229EC0DD004CA8C0 /* tcImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42AF687229EC0DD004CA8C0 /* tcImage.swift */; };
+		D42AF68C229EC7B5004CA8C0 /* tvBacking.png in Resources */ = {isa = PBXBuildFile; fileRef = D42AF68B229EC7B5004CA8C0 /* tvBacking.png */; };
 		D4771C5B229CC6DF0053CCAC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C5A229CC6DF0053CCAC /* MainViewController.swift */; };
 		D4771C61229CCBD70053CCAC /* Commodore Rounded v1.2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */; };
-		D4771C63229CCDFB0053CCAC /* TextCastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C62229CCDFB0053CCAC /* TextCastAPI.swift */; };
-		D4771C6A229E11850053CCAC /* CustomServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C69229E11850053CCAC /* CustomServer.swift */; };
+		D4771C63229CCDFB0053CCAC /* tcAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C62229CCDFB0053CCAC /* tcAPI.swift */; };
+		D4771C6A229E11850053CCAC /* tcServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4771C69229E11850053CCAC /* tcServer.swift */; };
 		D4FB89A0229CC31000F290CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FB899F229CC31000F290CC /* AppDelegate.swift */; };
 		D4FB89A5229CC31000F290CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FB89A3229CC31000F290CC /* Main.storyboard */; };
 		D4FB89A7229CC31100F290CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FB89A6229CC31100F290CC /* Assets.xcassets */; };
@@ -22,11 +25,14 @@
 		2DE0CD570237804095411049 /* Pods_textcast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_textcast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59831DBF97E9BAB382D54E64 /* Pods-textcast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textcast.release.xcconfig"; path = "Pods/Target Support Files/Pods-textcast/Pods-textcast.release.xcconfig"; sourceTree = "<group>"; };
 		C0926D80766A57F40F6C8CEC /* Pods-textcast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-textcast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-textcast/Pods-textcast.debug.xcconfig"; sourceTree = "<group>"; };
+		D42AF685229EBD15004CA8C0 /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testImage.jpg; sourceTree = "<group>"; };
+		D42AF687229EC0DD004CA8C0 /* tcImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcImage.swift; sourceTree = "<group>"; };
+		D42AF68B229EC7B5004CA8C0 /* tvBacking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tvBacking.png; sourceTree = "<group>"; };
+		D42AF68D229EC7FD004CA8C0 /* textcast-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "textcast-Bridging-Header.h"; sourceTree = "<group>"; };
 		D4771C5A229CC6DF0053CCAC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Commodore Rounded v1.2.ttf"; path = "../../Commodore Rounded v1.2.ttf"; sourceTree = "<group>"; };
-		D4771C62229CCDFB0053CCAC /* TextCastAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCastAPI.swift; sourceTree = "<group>"; };
-		D4771C64229CD0C20053CCAC /* textcast-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "textcast-Bridging-Header.h"; sourceTree = "<group>"; };
-		D4771C69229E11850053CCAC /* CustomServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomServer.swift; sourceTree = "<group>"; };
+		D4771C62229CCDFB0053CCAC /* tcAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcAPI.swift; sourceTree = "<group>"; };
+		D4771C69229E11850053CCAC /* tcServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tcServer.swift; sourceTree = "<group>"; };
 		D4FB899C229CC31000F290CC /* textcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FB899F229CC31000F290CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FB89A4229CC31000F290CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,7 +74,6 @@
 		D4FB8993229CC31000F290CC = {
 			isa = PBXGroup;
 			children = (
-				D4771C64229CD0C20053CCAC /* textcast-Bridging-Header.h */,
 				D4FB899E229CC31000F290CC /* textcast */,
 				D4FB899D229CC31000F290CC /* Products */,
 				8E614C431A9399F33CCBDD2F /* Pods */,
@@ -87,14 +92,18 @@
 		D4FB899E229CC31000F290CC /* textcast */ = {
 			isa = PBXGroup;
 			children = (
-				D4771C69229E11850053CCAC /* CustomServer.swift */,
+				D42AF68D229EC7FD004CA8C0 /* textcast-Bridging-Header.h */,
+				D42AF687229EC0DD004CA8C0 /* tcImage.swift */,
+				D42AF685229EBD15004CA8C0 /* testImage.jpg */,
+				D42AF68B229EC7B5004CA8C0 /* tvBacking.png */,
+				D4771C69229E11850053CCAC /* tcServer.swift */,
 				D4FB89B1229CC33D00F290CC /* textcast.entitlements */,
 				D4FB899F229CC31000F290CC /* AppDelegate.swift */,
 				D4FB89A3229CC31000F290CC /* Main.storyboard */,
 				D4771C5A229CC6DF0053CCAC /* MainViewController.swift */,
 				D4FB89A6229CC31100F290CC /* Assets.xcassets */,
 				D4FB89A8229CC31100F290CC /* LaunchScreen.storyboard */,
-				D4771C62229CCDFB0053CCAC /* TextCastAPI.swift */,
+				D4771C62229CCDFB0053CCAC /* tcAPI.swift */,
 				D4771C60229CCBD50053CCAC /* Commodore Rounded v1.2.ttf */,
 				D4FB89AB229CC31100F290CC /* Info.plist */,
 			);
@@ -182,7 +191,9 @@
 				D4FB89AA229CC31100F290CC /* LaunchScreen.storyboard in Resources */,
 				D4FB89A7229CC31100F290CC /* Assets.xcassets in Resources */,
 				D4FB89A5229CC31000F290CC /* Main.storyboard in Resources */,
+				D42AF68C229EC7B5004CA8C0 /* tvBacking.png in Resources */,
 				D4771C61229CCBD70053CCAC /* Commodore Rounded v1.2.ttf in Resources */,
+				D42AF686229EBD15004CA8C0 /* testImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,9 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4771C6A229E11850053CCAC /* CustomServer.swift in Sources */,
+				D4771C6A229E11850053CCAC /* tcServer.swift in Sources */,
 				D4771C5B229CC6DF0053CCAC /* MainViewController.swift in Sources */,
-				D4771C63229CCDFB0053CCAC /* TextCastAPI.swift in Sources */,
+				D4771C63229CCDFB0053CCAC /* tcAPI.swift in Sources */,
+				D42AF688229EC0DD004CA8C0 /* tcImage.swift in Sources */,
 				D4FB89A0229CC31000F290CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

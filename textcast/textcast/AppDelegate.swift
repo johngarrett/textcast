@@ -11,13 +11,13 @@ import GoogleCast
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    private let appId = "EDD97FE2"
+//    private let appId = "EDD97FE2"
     let kDebugLoggingEnabled = true
     
     var window: UIWindow?
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        let discoveryCriteria = GCKDiscoveryCriteria(applicationID: appId)
+        let discoveryCriteria = GCKDiscoveryCriteria(applicationID: kGCKDefaultMediaReceiverApplicationID)
         let castOptions = GCKCastOptions(discoveryCriteria: discoveryCriteria)
         GCKCastContext.setSharedInstanceWith(castOptions)
         GCKLogger.sharedInstance().delegate = self

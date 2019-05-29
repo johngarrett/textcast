@@ -1,21 +1,24 @@
 //
-//  CustomServer.swift
+//  tcServer.swift
 //  textcast
 //
 //  Created by John Garrett on 5/28/19.
 //  Copyright © 2019 John Garrett. All rights reserved.
 //
 
+import UIKit
 import Foundation
 import Swifter
 
-public func customServer(_ publicDir: String, withText text: String) -> HttpServer {
+public func tcServer(_ publicDir: String, withText text: String) -> HttpServer {
     let server = HttpServer()
     
     server["/public/:path"] = shareFilesFromDirectory(publicDir)
     
-    server["/files/:path"] = directoryBrowser("/")
     
+    server["/files/:path"] = directoryBrowser(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+
+    //http://192.168.1.136:8080/files//fileName.png
     server["/"] = scopes {
         html {
             body {
@@ -48,3 +51,18 @@ public func customServer(_ publicDir: String, withText text: String) -> HttpServ
     return server
 }
 
+fileprivate func retrieveImage(){
+    let fileManager = FileManager.default
+    
+//    let documentsPath =
+//    let documentsURL = URL(fileURLWithPath: documentsPath, isDirectory: true)
+//    let path = String(fileURL.absoluteString.dropFirst(7)) //remove file://
+    
+    //return the file if we have it in storage
+//    if fileManager.fileExists(atPath: path), let data = fileManager.contents(atPath: path), data.count > 3708{
+//        let result = Result.success(data)
+//        completion(result)
+//        return
+//    }
+    
+}

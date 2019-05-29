@@ -1,5 +1,5 @@
 //
-//  TextCastAPI.swift
+//  tcAPI.swift
 //  textcast
 //
 //  Created by John Garrett on 5/27/19.
@@ -11,17 +11,17 @@ import Swifter
 import GoogleCast
 
 
-class TextCastAPI{
+class tcAPI{
     private let port:UInt16 = 8080
-    private let server = customServer(Bundle.main.resourcePath!, withText: "testing")
+    private let server = tcServer(Bundle.main.resourcePath!, withText: "testing")
     
     static var shared = {
-        return TextCastAPI()
+        return tcAPI()
     }
     
     func getAddress() -> String?{
         if let ipAddr = getIPAddress(){
-            return "http://\(ipAddr):\(port)/text"
+            return "http://\(ipAddr):\(port)"
         }
         return nil
     }
@@ -29,6 +29,7 @@ class TextCastAPI{
     init(){
         do{
             print(getAddress() ?? "no ip address avaliable")
+            generateImage(withText: "Waiting for text")
             try server.start(port)
         }
         catch{
@@ -36,15 +37,18 @@ class TextCastAPI{
         }
     }
     
-    func generatePage(withText text: String){
-
-        server["/text"] = scopes {
-            html {
-                body {
-                    h1 { inner = text }
-                }
-            }
+    func getImageURL() -> String?{
+        if let address = getAddress(){
+            return "\(address)/files/\(imageName)"
         }
+        return nil
+    }
+    
+    func generateImage(withText text: String){
+        guard let image = UIImage(named: "tvBacking.png") else {
+            fatalError("Could not find image for background.")
+        }
+        textToImage(drawText: text, inImage: image)
     }
     
     private func getIPAddress() -> String? {

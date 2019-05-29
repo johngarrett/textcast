@@ -15,18 +15,18 @@ class MainViewController: UIViewController {
     private var castButton: GCKUICastButton!
     private var mediaInformation: GCKMediaInformation?
     private var sessionManager: GCKSessionManager!
-    private var tcAPI:TextCastAPI?
+    private var api:tcAPI?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         castButton = GCKUICastButton(frame: CGRect(x: UIScreen.main.bounds.width - 80, y: 30, width: 50, height: 50))
         castButton.tintColor = .black
         self.view.addSubview(castButton)
-        tcAPI = TextCastAPI()
+        api = tcAPI()
     }
     @IBAction func postButtonTapped(_ sender: Any) {
         if let text = textView.text{
-            tcAPI?.generatePage(withText: text)
+            api?.generateImage(withText: text)
         }
         load()
     }
@@ -34,24 +34,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: GCKSessionManagerListener, GCKRemoteMediaClientListener, GCKRequestDelegate {
     func load(){
-        let metadata = GCKMediaMetadata()
-        metadata.setString("Big Buck Bunny (2008)", forKey: kGCKMetadataKeyTitle)
-        metadata.setString("Big Buck Bunny tells the story of a giant rabbit with a heart bigger than " +
-            "himself. When one sunny day three rodents rudely harass him, something " +
-            "snaps... and the rabbit ain't no bunny anymore! In the typical cartoon " +
-            "tradition he prepares the nasty rodents a comical revenge.",
-                           forKey: kGCKMetadataKeySubtitle)
-        metadata.addImage(GCKImage(url: URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg")!,
-                                   width: 480,
-                                   height: 360))
-        
-        let url = URL.init(string: tcAPI?.getAddress() ?? "uhhh")
-        guard let mediaURL = url else {
+        guard let mediaURL = URL.init(string: api?.getImageURL() ?? "bad URL") else {
             print("invalid mediaURL")
             return
         }
         
         let mediaInfoBuilder = GCKMediaInformationBuilder.init(contentURL: mediaURL)
+        mediaInfoBuilder.contentType = "image/png"
         mediaInformation = mediaInfoBuilder.build()
         
         guard let mediaInfo = mediaInformation else {

@@ -52,7 +52,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90490164974619292" green="0.83564625442583695" blue="0.8010624119129155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.83529411764705885" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="fdb-LG-5BM" secondAttribute="bottom" id="33T-1n-iEC"/>
                             <constraint firstItem="fdb-LG-5BM" firstAttribute="top" secondItem="oWZ-vX-oJi" secondAttribute="bottom" id="NNJ-fu-Qfv"/>
